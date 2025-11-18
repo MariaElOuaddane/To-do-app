@@ -6,9 +6,11 @@ function TodosInput() {
     const[text, setText]= useState('')
     const dispatch= useDispatch()
 
-    function handleAdd(t){
-        dispatch(addTodo(t))
-        setText('')
+    function handleAdd() {
+      const trimmed = text.trim();
+      if (!trimmed) return;
+      dispatch(addTodo(trimmed));
+      setText('');
     }
 
   return (
@@ -16,7 +18,7 @@ function TodosInput() {
         <input type='text'
         value={text} 
         onChange={(e)=>setText(e.target.value)}/>
-        <button onClick={()=>handleAdd(text)}>Add</button>
+        <button onClick={handleAdd}>Add</button>
     </div>
   )
 }
