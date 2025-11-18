@@ -105,6 +105,9 @@ body {
   background-color: white;
   cursor: pointer;
   accent-color: #d28ddc; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 
@@ -158,6 +161,7 @@ body {
   border-radius: 10px;
   cursor: pointer;
   color: #000000;
+  background-color: rgb(255, 255, 255);
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: all 0.2s ease;
 }
