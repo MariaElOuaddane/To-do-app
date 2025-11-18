@@ -87,8 +87,8 @@ body {
 }
 
 
-.true-todo > p{
-  color: gray;
+li.true-todo > p{
+  color: gray !important;
   text-decoration: line-through;
 }
 
@@ -102,12 +102,35 @@ body {
 .All-todos li input[type="checkbox"] {
   width: 20px;
   height: 20px;
-  background-color: white;
   cursor: pointer;
+
+  -webkit-appearance: checkbox;
+  -moz-appearance: checkbox;
+  appearance: checkbox;
+
+  background-color: white;
+  border: 2px solid #d28ddc;
+  border-radius: 4px;
+
   accent-color: #d28ddc; 
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+}
+
+
+
+.All-todos li input[type="checkbox"]:checked {
+  background-color: #d28ddc;   
+  border-color: #d28ddc;
+}
+
+
+.All-todos li input[type="checkbox"]:checked::after {
+  content: "✔";                
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 14px;
 }
 
 
