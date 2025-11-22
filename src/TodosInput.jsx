@@ -14,12 +14,15 @@ function TodosInput() {
     }
 
   return (
+    <>
+    <h1 style={{textAlign:'center'}}>To-do list</h1>
     <div className='Add-form'>
         <input type='text'
         value={text} 
         onChange={(e)=>setText(e.target.value)}/>
         <button onClick={handleAdd}>Add</button>
     </div>
+    </>
   )
 }
 
